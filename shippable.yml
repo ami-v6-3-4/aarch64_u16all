@@ -9,13 +9,14 @@ runtime:
   
 services:
   - couchdb #1.6.0 
-  - elasticsearch #6.2.4
-  - memcached #1.5.12 
-  - mongodb #4.0.3 
+  - elasticsearch #6.1.1
+  - memcached #1.4.25 
+  - mongodb #3.6.2 
+  - neo4j #3.3.1 
   - postgres #9.5 
-  - rabbitmq #3.6.15 
-  - redis  #5.0.0 
-  - selenium #3.141.5 
+  - rabbitmq #3.6.14  
+  - redis  #4.0.8 
+  - selenium #3.8.1 
   - sqlite #3.11.0
 
 build:
@@ -42,7 +43,7 @@ build:
     - psql --version
     - redis-server -v
     - which sqlite3 #|| true
-    - java -jar /usr/local/selenium/selenium-server-standalone-3.141.5.jar --version
+    - java -jar /usr/local/selenium/selenium-server-standalone-3.8.1.jar --version
     - sqlite3 --version
     - elasticsearch --version
     - sudo -i -u couchdb /opt/couchdb/bin/couchdb 2>&1 >/dev/null &
